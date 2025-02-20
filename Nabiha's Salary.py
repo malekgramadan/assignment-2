@@ -12,6 +12,7 @@ while action != "no":
     rent = (rent_percent / 100) * salary
     electricity = (electricity_percent / 100) * salary
     total = savings + rent + electricity
+    remaining = salary - total
         
     list.append([month, salary, savings, rent, electricity, total])
     action = input("Do you want to add another month? (yes/no): ")
@@ -19,3 +20,4 @@ print(f"You have {savings} in savings.")
 print(f"You have spent {rent} on rent.")
 print(f"You have spent {electricity} on electricity.")
 print(f"You have spent {total} in total.")
+print(f"You have {remaining} remaining.")
