@@ -14,6 +14,7 @@ while action != "no":
     total = savings + rent + electricity
     remaining = salary - total
     yearly_cost = (rent + electricity) * 12
+    
         
     list.append([month, salary, savings, rent, electricity, total])
     action = input("Do you want to add another month? (yes/no): ")
