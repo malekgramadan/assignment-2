@@ -1,7 +1,7 @@
 action = "yes"
 list = []
 
-while action != "no":
+while action.lower() != "no": #Making sure that the user can add as many months as they want all sorted in a list
     salary = float(input("Enter your salary: "))
     month = str(input("Enter the month: "))
     savings_percent = float(input("Enter the percentage of salary you want to save: "))
