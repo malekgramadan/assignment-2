@@ -8,15 +8,15 @@ while action != "no":
     rent_percent = float(input("Enter the percentage of salary you want to spend on rent: "))
     electricity_percent = float(input("Enter the percentage of salary you want to spend on electricity: "))
         
-    savings = (savings_percent / 100) * salary
-    rent = (rent_percent / 100) * salary
-    electricity = (electricity_percent / 100) * salary
-    total = savings + rent + electricity
-    remaining = salary - total
-    yearly_cost = (rent + electricity) * 12
-    
+    savings = (savings_percent / 100) * salary #Calculating the amount saved
+    rent = (rent_percent / 100) * salary #Calculating the amount spent on rent
+    electricity = (electricity_percent / 100) * salary #Calculating the amount spent on electricity
+    total = savings + rent + electricity #Calculating the total amount spent on rent, electricity, and savings
+    remaining = salary - total #Calculating the remaining amount after spending on rent, electricity, and savings
+    yearly_cost = (rent + electricity) * 12 #What the user spends in a year for electricity and rent
+    doubled_salary = salary * 2 #the fun part
         
-    list.append([month, salary, savings, rent, electricity, total])
+    list.append([month, salary, savings, rent, electricity, total])#Adding the month, salary, savings, rent, electricity, and total to the list
     action = input("Do you want to add another month? (yes/no): ")
 print(f"You have {savings} in savings.")
 print(f"You have spent {rent} on rent.")
@@ -24,3 +24,4 @@ print(f"You have spent {electricity} on electricity.")
 print(f"You have spent {total} in total.")
 print(f"You have {remaining} remaining.")
 print(f"You have spent {yearly_cost} in total for rent and electricity.")
+print(f"Your salary doubled is {doubled_salary}.")
