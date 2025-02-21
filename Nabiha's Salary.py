@@ -34,5 +34,5 @@ for i in list: #Printing the user's data in a table
     print(f"You would spend {i[7]} in total for rent and electricity.")
     print(f"If your salary was doubled it would be {i[8]}.")
     print(f"You have {i[9]} additional savings.")
-    print(f"The total of saving from all months is {total_savings}")
     print(" ")
+print(f"The total of saving from all months is {total_savings}") #Printing the total of all additional savings
