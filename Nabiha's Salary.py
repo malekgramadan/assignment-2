@@ -1,5 +1,6 @@
 action = "yes"
 list = []
+total_savings = 0
 
 while action.lower() != "no": #Making sure that the user can add as many months as they want all sorted in a list
     salary = float(input("Enter your salary: "))
@@ -17,12 +18,13 @@ while action.lower() != "no": #Making sure that the user can add as many months 
     yearly_cost = (rent + electricity) * 12 #What the user spends in a year for electricity and rent
     doubled_salary = salary * 2 #the fun part
     
-    if add_savings.lower() != "yes":
+    if add_savings.lower() == "yes":
         additional_savings = float(input("Enter the amount of additional savings: "))
-        savings += additional_savings
-        remaining -= additional_savings
+        savings += additional_savings # Add additional savings to total savings
+        remaining -= additional_savings # Deduct additional savings from remaining salary
+        total_savings += additional_savings  # Add to the total additional savings
 
-    list.append([month, salary, savings, rent, electricity, total, remaining, yearly_cost, doubled_salary, additional_savings])#Adding the user's data to a list
+    list.append([month, salary, savings, rent, electricity, total, remaining, yearly_cost, doubled_salary, additional_savings])
     action = input("Do you want to add another month? (yes/no): ")
 
 for i in list: #Printing the user's data in a table
@@ -32,4 +34,5 @@ for i in list: #Printing the user's data in a table
     print(f"You would spend {i[7]} in total for rent and electricity.")
     print(f"If your salary was doubled it would be {i[8]}.")
     print(f"You have {i[9]} additional savings.")
+    print(f"The total of saving from all months is {total_savings}")
     print(" ")
