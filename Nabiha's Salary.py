@@ -17,11 +17,12 @@ while action.lower() != "no": #Making sure that the user can add as many months 
     yearly_cost = (rent + electricity) * 12 #What the user spends in a year for electricity and rent
     doubled_salary = salary * 2 #the fun part
     
-    if add_savings.lower() == "yes":
+    if add_savings.lower() == "yes": #If the user has additional savings
         additional_savings = float(input("Enter the amount of additional savings: "))
         savings += additional_savings
+        remaining -= additional_savings
 
-    list.append([month, salary, savings, rent, electricity, total])#Adding the month, salary, savings, rent, electricity, and total to the list
+    list.append([month, salary, savings, rent, electricity, total, remaining, yearly_cost, doubled_salary, additional_savings])#Adding the user's data to a list
     action = input("Do you want to add another month? (yes/no): ")
 print(f"You have {savings} in savings.")
 print(f"You have spent {rent} on rent.")
@@ -31,3 +32,4 @@ print(f"You have {remaining} remaining.")
 print(f"You have spent {yearly_cost} in total for rent and electricity.")
 print(f"Your salary doubled is {doubled_salary}.")
 print(f"You added {additional_savings} to your savings.")
+print(list)
